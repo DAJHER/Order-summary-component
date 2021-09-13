@@ -1,5 +1,5 @@
-:root{        
-    --mobile-size: 375px;
+:root {
+    --mobile-size: 375px;/*450;*/
     --desktop-size: 1440px;
     
     --primary-pale-blue: hsl(225, 100%, 94%);
@@ -9,30 +9,112 @@
     --neutral-desaturated-blue: hsl(224, 23%, 55%);
     --neutral-dark-blue: hsl(223, 47%, 23%);
 }
-*{
+* {
     box-sizing: border-box;
 }
-body{
+body {
     margin: 0;
-    padding: 0;;
-    font-size: 16px;
-    font-family: 'Red Hat Display', sans-serif;
+    padding: 0;
+    font-size: 1em;
+    font-family: "Red Hat Display", sans-serif;
 }
 .attribution {
+    margin-top: -8vh;
     font-size: 11px;
     text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+.container {    
+  background: var(--primary-pale-blue) url("../images/pattern-background-mobile.svg") repeat-x;
+  min-width: 450px;
+  /* width: 100%; */
+  padding: 5rem 0;
+  height: 100vh;  
+}
+.card{
+    /* background-color: var(--neutral-very-pale-blue); */
+    background-color: white;
+    /* max-width: var(--mobile-size); */
+    min-width: var(--mobile-size);
+    width: 450px;
+    margin: 0 auto;    
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+}
+.card__header {
+  background: url("../images/illustration-hero.svg") no-repeat;
+  height: 15rem;
+  background-size: cover;  
+}
+.card__container{
+    background-color: aquamarine;    
+    padding: 3rem 2.3rem;
+}
+.card__text{    
+    margin-bottom: 2rem;
+}
+.card__title{
+    color: var(--neutral-dark-blue);
+    font-weight: 900;
+    font-size: 1.8em;
+}
+.card__sumary{
+    color: var(--neutral-desaturated-blue);    
+    font-size: 1.4em;;
+    /* letter-spacing: 0.05em; */
+    line-height: 1.6;
+    /* font-weight: 500; */
+    /* padding-top: .5em; */
+}
+
+.card__plan{
+    background-color: var(--neutral-very-pale-blue);
+    margin: 0 auto;
+    height: 120px;
+    /* width: 85%; */
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:auto;
+}
+.card__plan--icon{
+    /* background-size: cover; */
+    width: 65px;
+    height: 65px;
+}
+.card__cost{
+    display: flex;
+    flex-direction: column;
+    /* width: max-content; */
+    align-items: flex-start;
+    justify-content: space-evenly;    
+    width: 35%;
+    height: 50%;
+
+}
+
+@media screen and (min-width: 600px) {
+    .attribution {
+        margin-top: -3vh;
+    }
+  .container {
+    background: var(--primary-pale-blue) url("../images/pattern-background-desktop.svg") repeat-x;
+    max-width: var(--desktop-size);
+    margin: 0 auto;
+  }
+  .card{      
+    max-width: 450px;
+    /* width: 450px; */
+  }
+  .card__header {
+      /* width: 500px; */
+      /* height: 15rem; */
+      
   }
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+}
 
-  .container{
-    background: url('../images/pattern-background-mobile.svg') no-repeat ;
-    
-
-  }
-  .card__container{
-      background: url('../images/illustration-hero.svg') no-repeat;
-    ;
-  }
