@@ -94,10 +94,12 @@ body {
 	font-weight: 700;
 }
 .card__plan--type {
+    color: var(--neutral-dark-blue);
 	font-weight: 900;
 }
 .card__plan--change {
 	font-weight: 700;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .card__ctaPay {
 	display: block;
@@ -114,12 +116,14 @@ body {
     box-shadow: var(--primary-bright-blue) 0px 10px 40px -16px; 
 }
 .card__order-cancel {
-	padding-top: 35px;
+	margin-top: 35px;
 	text-decoration: none;
 	font-weight: 900;
 	display: inline-block;
 	font-size: 1.4em;
 	color: var(--neutral-desaturated-blue);
+    background: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .attribution {
@@ -136,6 +140,18 @@ body {
 .attribution a {
 	color: hsl(228, 45%, 44%);
 }
+.card__plan--change:active{
+    text-decoration: none;
+    color: var(--primary-bright-blue);        
+}
+.card__ctaPay:active{
+    background-color: var(--primary-pale-blue);
+    cursor: pointer;
+}
+.card__order-cancel:active{
+    color: var(--neutral-dark-blue);
+}
+
 @media screen and (min-width: 500px) {
 	.container {
 		background: var(--primary-pale-blue)
@@ -161,4 +177,5 @@ body {
 	.card__order-cancel {		
 		font-size: 1em;		
 	}
+ 
 }
